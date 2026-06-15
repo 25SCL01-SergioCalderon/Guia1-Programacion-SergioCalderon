@@ -1,0 +1,34 @@
+using System;
+
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Console.WriteLine("Lecc 16 - Act2 - Inciso 1");
+        Console.WriteLine("Sergio Calderón / Clave 9");
+
+        //Arreglo - inicia 
+        int[] edadPersona = new int[7];
+        int cantidadPersonasMayores = 0;
+
+        //Solicitar las edades y almacenarlos en un arreglo 
+        for (int i = 0; i < edadPersona.Length; i++)
+        {
+            Console.Write("Ingrese la edad " + i + ": ");
+            // CAMBIO: Se agregó Console.ReadLine() para que puedas escribir
+            edadPersona[i] = Convert.ToInt32(Console.ReadLine());
+
+            if (edadPersona[i] >= 18)
+                cantidadPersonasMayores++;
+        }
+
+        //Mostrar los datos del arreglo 
+        Console.Clear();
+        Console.WriteLine("Las edades ingresadas son:");
+        for (int i = 0; i < edadPersona.Length; i++)
+        {
+            Console.WriteLine(edadPersona[i] + " - ");
+        }
+        Console.WriteLine("La cantidad de personas mayores de edad son: " + cantidadPersonasMayores);
+    }
+}
